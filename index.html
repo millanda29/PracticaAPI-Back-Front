@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/static/img/logo-app.png">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <title>Usuarios CRUD</title>
+</head>
+<body>
+    <h1>USUARIOS</h1>
+
+    <!-- GET ALL -->
+    <p>GetUsuarios</p>
+    <button onclick="getUsuarios()">Obtener Usuarios</button>
+
+    <!-- GET BY ID -->
+    <p>GetByIdUsuario</p>
+    <input type="text" id="getUsuarioId" placeholder="ID de Usuario">
+    <button onclick="getByIdUsuario()">Obtener Usuario por ID</button>
+
+    <!-- POST -->
+    <p>PostUsuario</p>
+    <input type="text" id="postUsuarioNombre" placeholder="Nombre de Usuario">
+    <input type="number" id="postUsuarioEdad" placeholder="Edad">
+    <input type="number" id="postUsuarioClicks" placeholder="Clicks en la Página">
+    <input type="number" id="postUsuarioTiempo" placeholder="Tiempo en la Página (min)">
+    <label>
+        Permiso Ver Estadística:
+        <input type="checkbox" id="postUsuarioPermiso">
+    </label>
+    <button onclick="createUsuario()">Crear Usuario</button>
+    
+    <!-- PUT -->
+    <p>PutUsuario</p>
+    <input type="text" id="putUsuarioId" placeholder="ID de Usuario">
+    <input type="text" id="putUsuarioNombre" placeholder="Nuevo Nombre de Usuario">
+    <input type="number" id="putUsuarioEdad" placeholder="Nueva Edad">
+    <input type="number" id="putUsuarioClicks" placeholder="Nuevo Clicks en la Página">
+    <input type="number" id="putUsuarioTiempo" placeholder="Nuevo Tiempo en la Página (min)">
+    <label>
+        Permiso Ver Estadística:
+        <input type="checkbox" id="putUsuarioPermiso">
+    </label>
+    <button onclick="putUsuario()">Actualizar Usuario</button>
+
+    <!-- DELETE -->
+    <p>DeleteUsuario</p>
+    <input type="text" id="deleteUsuarioId" placeholder="ID de Usuario">
+    <button onclick="deleteUsuario()">Eliminar Usuario</button>
+
+    <!-- Tabla de usuarios -->
+    <div id="usuarios">
+        <h2>Lista de Usuarios</h2>
+        <table id="usuariosTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Clicks</th>
+                    <th>Tiempo en Página</th>
+                    <th>Permiso Ver Estadística</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>

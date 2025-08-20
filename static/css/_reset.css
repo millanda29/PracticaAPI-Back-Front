@@ -1,0 +1,27 @@
+/* /static/css/_reset.css */
+
+/* Reset básico de márgenes, padding y box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
